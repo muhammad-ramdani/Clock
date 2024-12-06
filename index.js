@@ -1,21 +1,27 @@
 const updateClock = () => {
-    document.getElementById("clock").textContent = new Date().toLocaleTimeString("en-GB", { hour: '2-digit', minute: '2-digit' });
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+
+    // Update hours and minutes
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+
+    // Toggle colon visibility for blinking effect
+    const colon = document.getElementById("colon");
+    colon.style.visibility = now.getSeconds() % 2 === 0 ? "visible" : "hidden";
 };
 
-// Update clock immediately
+// Update clock immediately and every second
 updateClock();
-
-// Update clock every second
 setInterval(updateClock, 1000);
 
 
 // Toggle fullscreen mode on double click
 document.body.addEventListener("dblclick", () => {
     if (!document.fullscreenElement) {
-        // Masuk ke fullscreen
         document.documentElement.requestFullscreen();
     } else {
-        // Keluar dari fullscreen
         document.exitFullscreen();
     }
 });
