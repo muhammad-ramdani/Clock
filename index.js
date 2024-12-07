@@ -25,3 +25,13 @@ document.body.addEventListener("dblclick", () => {
         document.exitFullscreen();
     }
 });
+
+
+// Set cursor to none after 2 seconds
+let timeout = setTimeout(() => (document.body.style.cursor = "none"), 2000);
+
+document.body.addEventListener("mousemove", () => {
+    document.body.style.cursor = "default";
+    clearTimeout(timeout);
+    timeout = setTimeout(() => (document.body.style.cursor = "none"), 2000);
+});
