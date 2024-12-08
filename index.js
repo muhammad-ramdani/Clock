@@ -1,3 +1,4 @@
+// Function to update the clock
 const updateClock = () => {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
@@ -12,7 +13,6 @@ const updateClock = () => {
     colon.style.visibility = now.getSeconds() % 2 === 0 ? "visible" : "hidden";
 };
 
-// Update clock immediately and every second
 updateClock();
 setInterval(updateClock, 1000);
 
