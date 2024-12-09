@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A stylish digital clock displaying the current time in hours and minutes. Double-click to toggle fullscreen mode.">
+    <title>Clock</title>
+    <link rel="icon" type="image/svg+xml" href="/clock.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-black">
+    <div class="h-screen grid gap-14 min-[553px]:gap-9 md:gap-6 md:grid-flow-col place-content-center text-neutral-200 text-[57vw] min-[566px]:text-[42.6vw] md:text-[25vw] text-center font-['Monoton'] select-none">
+        <div class="leading-none" id="hours"></div>
+        <div class="leading-none hidden md:block" id="colon">:</div>
+        <div class="leading-none" id="minutes"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
