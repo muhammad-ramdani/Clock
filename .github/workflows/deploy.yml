@@ -39,6 +39,9 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build
         run: yarn build
+      - name: Copy headers file
+        run: |
+          echo "/assets/*:\n  Cache-Control: public, max-age=86400" > ./dist/.headers
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
