@@ -1,0 +1,37 @@
+# Mengabaikan direktori node_modules
+node_modules/
+
+# Mengabaikan direktori build hasil Vite
+dist/
+
+# Mengabaikan direktori cache Vite
+.vite/
+
+# Mengabaikan direktori keluaran untuk testing atau coverage
+coverage/
+
+# File lock package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# File hasil minifikasi atau bundle
+*.min.js
+*.min.css
+
+# Mengabaikan file konfigurasi atau output untuk alat lain
+.env
+.env.*.local
+
+# Mengabaikan gambar dan aset statis lainnya
+public/**/*.png
+public/**/*.jpg
+public/**/*.svg
+public/**/*.gif
+
+# Mengabaikan output linting atau log
+*.log
+
+# Mengabaikan file sistem operasi
+.DS_Store
+Thumbs.db

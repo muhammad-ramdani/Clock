@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-    base: '/clock/',
+    base: "/clock/",
     build: {
-        outDir: 'dist'
-    }
+        outDir: "dist",
+    },
 });
